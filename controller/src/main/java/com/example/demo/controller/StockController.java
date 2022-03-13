@@ -21,7 +21,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@Controller
+import io.swagger.annotations.Api;
+
+@Api(value = "Stock", description = "Manipulate stock, or get store stocks")
+@Controller(value = "Stocks")
 @RequestMapping(path = "/stock")
 @RequiredArgsConstructor
 public class StockController {

@@ -10,7 +10,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@Controller
+import io.swagger.annotations.Api;
+
+@Api(value = "Shoes", description = "Get shoes")
+@Controller(value = "Shoes")
 @RequestMapping(path = "/shoes")
 @RequiredArgsConstructor
 public class ShoeController {

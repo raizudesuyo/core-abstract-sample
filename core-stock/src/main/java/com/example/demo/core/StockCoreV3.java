@@ -19,8 +19,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-@Implementation(version = 1)
-public class StockCoreV1 extends AbstractStockCore {
+@Implementation(version = 3)
+public class StockCoreV3 extends AbstractStockCore {
 
   @Autowired
   private ShopRepository shopRepository;
@@ -28,7 +28,7 @@ public class StockCoreV1 extends AbstractStockCore {
   @Autowired
   private StockInventoryMapper stockInventoryMapper;
 
-  public StockCoreV1(ShopRepository shopRepository, StockInventoryMapper stockInventoryMapper) {
+  public StockCoreV3(ShopRepository shopRepository, StockInventoryMapper stockInventoryMapper) {
     this.shopRepository = shopRepository;
     this.stockInventoryMapper = stockInventoryMapper;
   }

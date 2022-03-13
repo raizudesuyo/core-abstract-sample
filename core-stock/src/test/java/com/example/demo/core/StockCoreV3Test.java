@@ -33,17 +33,17 @@ import org.springframework.test.context.jdbc.Sql.ExecutionPhase;
 @ComponentScan(basePackages = {"com.example.demo.core", "com.example.demo.mapper", "com.example.demo.facade"})
 @EntityScan(basePackages = {"com.example.demo.model"})
 @EnableJpaRepositories("com.example.demo.repository")
-@SpringBootTest(classes = { StockCoreV1Test.class })
+@SpringBootTest(classes = { StockCoreV3Test.class })
 @Sql(scripts = "/test-data.sql", executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 @Sql(scripts = "/test-cleanup.sql", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
-public class StockCoreV1Test {
+public class StockCoreV3Test {
 
   @Autowired
-  private StockCoreV1 stockCoreV1;
+  private StockCoreV3 stockCoreV1;
 
   private int SHOP_ID = 1;
 
-  public StockCoreV1Test() {
+  public StockCoreV3Test() {
     MockitoAnnotations.initMocks(this);
   }
 

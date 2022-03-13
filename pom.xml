@@ -8,6 +8,7 @@
   <modules>
     <module>controller</module>
     <module>dto</module>
+    <module>model</module>
     <module>core</module>
     <module>core-legacy</module>
     <module>core-new</module>
@@ -69,5 +70,4 @@
       </exclusions>
     </dependency>
   </dependencies>
-
 </project>

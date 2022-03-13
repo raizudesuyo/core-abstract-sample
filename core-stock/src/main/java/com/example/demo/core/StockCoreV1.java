@@ -16,15 +16,22 @@ import com.example.demo.mapper.StockInventoryMapper;
 import com.example.demo.repository.ShopRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 @Implementation(version = 1)
 public class StockCoreV1 extends AbstractStockCore {
 
   @Autowired
-  ShopRepository shopRepository;
+  private ShopRepository shopRepository;
 
   @Autowired
-  StockInventoryMapper stockInventoryMapper;
+  private StockInventoryMapper stockInventoryMapper;
+
+  public StockCoreV1(ShopRepository shopRepository, StockInventoryMapper stockInventoryMapper) {
+    this.shopRepository = shopRepository;
+    this.stockInventoryMapper = stockInventoryMapper;
+  }
 
   @Override
   public Stock getStock(Integer shopId) throws Exception {

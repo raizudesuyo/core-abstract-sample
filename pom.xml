@@ -8,9 +8,11 @@
   <modules>
     <module>controller</module>
     <module>dto</module>
+    <module>model</module>
     <module>core</module>
     <module>core-legacy</module>
     <module>core-new</module>
+    <module>core-stock</module>
   </modules>
 
   <parent>
@@ -57,6 +59,11 @@
       <optional>true</optional>
     </dependency>
     <dependency>
+      <groupId>io.springfox</groupId>
+      <artifactId>springfox-boot-starter</artifactId>
+      <version>3.0.0</version>
+    </dependency>
+    <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
@@ -68,5 +75,4 @@
       </exclusions>
     </dependency>
   </dependencies>
-
 </project>
